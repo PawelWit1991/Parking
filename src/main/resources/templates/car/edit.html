@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head lang="pl">
+    <title>ADD CLIENT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<h1><p th:utext="#{parking.welcome}"></h1>
+
+</p>
+
+<form  th:action="@{/car/edit/} + ${id}"  th:object="${car}" method="post">
+    <table border="1">
+
+        <tr>
+            <td><label th:text="#{msg.brand}" /></td>
+            <td><input type="text" th:field="*{brand}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.modelCar}" /></td>
+            <td><input type="text" th:field="*{modelCar}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.registrationNumber}" /></td>
+            <td><input type="text" th:field="*{registrationNumber}" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+
+</html>>
