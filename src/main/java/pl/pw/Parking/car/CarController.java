@@ -76,7 +76,7 @@ public class CarController {
     @RequestMapping("/all")
     public String all(Model model) {
         model.addAttribute("cars", carService.getAllCars());
-        return "car/all";
+        return "car/carsList";
     }
 
     @RequestMapping("/delete/{id}")
@@ -95,7 +95,7 @@ public class CarController {
         return "car/edit";
     }
 
-    @PostMapping("/edit/{id}")       // w ten sposob odbieram edytowana clienta z widoku edit.jsp
+    @PostMapping("/edit/{id}")
 
     public String editedCar(@Valid Car car) {
 

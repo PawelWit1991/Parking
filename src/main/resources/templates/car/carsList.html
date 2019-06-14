@@ -16,14 +16,15 @@
         <th>ID</th>
         <th>BRAND</th>
         <th>MODEL CAR</th>
-        <th>REGISTRATION NUMBER</th>
+        <th>CREATED</th>
+        <th>MODIEFIED</th>
     </tr>
-    <tr th:each="car : ${clientCars}">
+    <tr th:each="car : ${cars}">
         <td th:text="${car.id}">ID</td>
-        <td th:text="${car.brand}">BRAND</td>
-        <td th:text="${car.modelCar}">MODEL CAR</td>
-        <td th:text="${car.registrationNumber}">REGISTRATION NUMBER</td>
-        <td th:text="${car.client}">CLIENT</td>
+        <td th:text="${car.brand}">TITLE</td>
+        <td th:text="${car.modelCar}">CONTENT</td>
+        <td th:text="${car.registrationNumber}">CREATED</td>
+        <td th:text="${car.client}">CREATED</td>
         <td><a th:href="@{|/delete/${car.id}|}" >Usuń</a></td>
         <td><a th:href="@{|/edit/${car.id}|}" >Edytuj</a></td>
     </tr>
