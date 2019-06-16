@@ -61,11 +61,9 @@ public class ClientController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String processRegistration(@Valid Client client, BindingResult result) {
-        if (result.hasErrors()) {
-            return "client/add";
-        }
+
         clientDao.saveClient(client);
-        return "redirect:/client/all";
+        return "redirect:/";
     }
 
     @RequestMapping("/all")

@@ -27,8 +27,18 @@
         <tr>
             <td><label th:text="#{msg.registrationNumber}" /></td>
             <td><input type="text" th:field="*{registrationNumber}" /></td>
-        </tr>
         <tr>
+            <td>Wybierz Klienta:</td>
+            <td>
+                <select th:field="*{client}">
+                    <option value=""> -- </option>
+                    <option th:each="client : ${clients}"
+                            th:value="${client.id}"
+                            th:utext="${client.lastName}"/>
+                </select>
+
+            </td>
+        </tr>
             <td><input type="submit" value="Submit" /></td>
         </tr>
     </table>
