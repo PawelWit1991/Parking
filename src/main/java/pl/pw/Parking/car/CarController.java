@@ -104,16 +104,30 @@ public class CarController {
         return "redirect:/cars/all";
     }
 
-    @RequestMapping("/findByClientId/{id}")
+    @RequestMapping("/clientCars/{id}")
+
 
     public String findByClientId(@PathVariable Long id, Model model) {
 
         model.addAttribute("clientCars", carService.findCarByClientId(id));
+        model.addAttribute("client",clientService.findByClientId(id));
 
         return "car/clientCars";
 
 
     }
+
+//    @RequestMapping("/clientCars/{id}")
+//
+//
+//    public List<Car> findByClientId(@PathVariable Long id, Model model) {
+//
+////        model.addAttribute("clientCars", carService.findCarByClientId(id));
+//
+//        return  carService.findCarByClientId(id);
+//
+//
+//    }
 
 
 }

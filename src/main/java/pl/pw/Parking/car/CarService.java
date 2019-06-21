@@ -3,6 +3,7 @@ package pl.pw.Parking.car;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.pw.Parking.client.Client;
 import pl.pw.Parking.parking.Parking;
 
 
@@ -46,6 +47,8 @@ public class CarService {
     public List<Car> findCarByClientId(Long id){
         return carRepository.findCarByClientId(id);
     }
+
+
 
     public Long getFreeSpaces() {
         return Parking.parkingSpaces-carRepository.countCars();

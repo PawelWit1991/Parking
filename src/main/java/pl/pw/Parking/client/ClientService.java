@@ -39,5 +39,8 @@ public class ClientService {
 
     }
 
+    public Client findByClientId(Long id){
+        return clientRepository.findByClientId(id);
+    }
 
 }
