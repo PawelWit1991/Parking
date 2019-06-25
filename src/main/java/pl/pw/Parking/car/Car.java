@@ -1,14 +1,11 @@
 package pl.pw.Parking.car;
-
 import org.hibernate.validator.constraints.NotBlank;
 import pl.pw.Parking.client.Client;
-
-
 import javax.persistence.*;
 
 
 @Entity
-@Table
+@Table(name="cars")
 public class Car {
 
     @Id
@@ -17,36 +14,48 @@ public class Car {
 
     @NotBlank(message = "Wpisz marke")
     @Column
-
     private String brand;
 
     @NotBlank(message = "Wpisz model")
     @Column(name = "model")
     private String modelCar;
 
-
-    public String getRegistrationNumber() {
-        return registrationNumber;
-    }
-
-    public void setRegistrationNumber(String registrationNumber) {
-        this.registrationNumber = registrationNumber;
-    }
-
     @NotBlank(message = "Wpisz numer rejestracyjny")
     @Column(name = "rejestracja")
     private String registrationNumber;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="client_id")
+    private Client client;
 
-    @Override
-    public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", brand='" + brand + '\'' +
-                ", modelCar='" + modelCar + '\'' +
-                ", registrationNumber='" + registrationNumber + '\'' +
-                ", client=" + client +
-                '}';
+
+    @Column(unique=true)
+    private Long parkingSpace;
+
+
+    public Car() {
+    }
+
+    public Car(Long id) {
+        this.id = id;
+    }
+
+    public Car(Long id, String brand) {
+        this.id = id;
+        this.brand = brand;
+    }
+
+    public Car(Long id,  String brand, String modelCar) {
+        this.id = id;
+        this.brand = brand;
+        this.modelCar = modelCar;
+    }
+
+    public Car(Long id,  String brand, String modelCar,String registrationNumber) {
+        this.id = id;
+        this.brand = brand;
+        this.modelCar = modelCar;
+        this.registrationNumber = registrationNumber;
     }
 
     public Car(String brand, String modelCar, String registrationNumber, Client client) {
@@ -56,11 +65,20 @@ public class Car {
         this.client = client;
     }
 
-    public long getId() {
+    public Car(Long id, String brand, String modelCar, String registrationNumber, Long parkingSpace, Client client) {
+        this.id = id;
+        this.brand = brand;
+        this.modelCar = modelCar;
+        this.registrationNumber = registrationNumber;
+        this.parkingSpace = parkingSpace;
+        this.client = client;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -72,20 +90,20 @@ public class Car {
         this.brand = brand;
     }
 
-    public Car() {
+    public String getModelCar() {
+        return modelCar;
     }
 
     public void setModelCar(String modelCar) {
         this.modelCar = modelCar;
     }
 
-    public String getModelCar() {
-        return modelCar;
+    public String getRegistrationNumber() {
+        return registrationNumber;
     }
 
-    public Car(String brand, String modelCar) {
-        this.brand = brand;
-        this.modelCar = modelCar;
+    public void setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
     }
 
     public Client getClient() {
@@ -96,10 +114,22 @@ public class Car {
         this.client = client;
     }
 
-//    @NotBlank(message = "Wybierz wlasciciela")
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="client_id")
-    private Client client;
+    public Long getParkingSpace() {
+        return parkingSpace;
+    }
 
+    public void setParkingSpace(Long parkingSpace) {
+        this.parkingSpace = parkingSpace;
+    }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", brand='" + brand + '\'' +
+                ", modelCar='" + modelCar + '\'' +
+                ", registrationNumber='" + registrationNumber + '\'' +
+                ", client=" + client +
+                '}';
+    }
 }

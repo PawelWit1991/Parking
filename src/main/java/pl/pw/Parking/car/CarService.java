@@ -8,6 +8,7 @@ import pl.pw.Parking.parking.Parking;
 
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -52,6 +53,17 @@ public class CarService {
 
     public Long getFreeSpaces() {
         return Parking.parkingSpaces-carRepository.countCars();
+    }
+
+    public List<Integer> parkingSpaces(){
+
+        List<Integer> parkingSpaces=new ArrayList<>();
+
+        for (int i = 0; i < 51; i++) {
+            parkingSpaces.add(i);
+        }
+
+        return parkingSpaces;
     }
 
 }

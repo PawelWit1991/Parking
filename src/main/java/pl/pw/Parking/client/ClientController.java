@@ -43,26 +43,12 @@ public class ClientController {
     }
 
 
-    //sposob bez walidacji
-//    @PostMapping("/add")
-//    @ResponseBody
-//
-//    public String addedCar(Model model, @RequestParam String firstName, @RequestParam String lastName ){
-//
-//
-//       Client client=new Client(firstName,lastName);
-//        model.addAttribute("client",client);
-//        clientService.save(client);
-//
-//
-//        return "cars/komunikatDodania";
-//
-//    }
-
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String processRegistration(@Valid Client client, BindingResult result) {
-
-        clientDao.saveClient(client);
+    public String add2(@Valid Client client, BindingResult result) {
+        if (result.hasErrors()) {
+            return "client/add";
+        }
+        clientService.save(client);
         return "redirect:/";
     }
 
