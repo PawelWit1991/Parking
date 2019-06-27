@@ -45,13 +45,7 @@
                 </select>
         </tr>
 
-        <tr>
-            <td><label th:text="#{msg.parkingSpace}" /></td>
-        <td><select th:field="*{parkingSpace}">
-            <option th:each="i : ${#numbers.sequence(0, 50)}" th:value="${i}" th:text="${i}">
-            </option>
-        </select>
-        </td>
+
         </tr>
             <td><input type="submit" value="Submit" /></td>
         </tr>

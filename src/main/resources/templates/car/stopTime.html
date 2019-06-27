@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head lang="pl">
+    <title>stopTime</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+
+
+<form action="#" th:action="@{/car/stopTime}"  method="post">
+    <table border="1">
+
+
+        <tr>
+            <td><label th:text="#{msg.stopTime}" /></td>
+            <td><input type="text" th:name="mins" /></td>
+
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+
+
+</html>
