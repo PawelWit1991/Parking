@@ -1,10 +1,10 @@
-package pl.pw.parking.car;
+package pl.pw.parking.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.pw.parking.repository.CarRepository;
 import pl.pw.parking.domain.Car;
-import pl.pw.parking.domain.Parking;
 
 
 import javax.transaction.Transactional;
@@ -15,8 +15,7 @@ import java.util.List;
 @Transactional
 public class CarService {
 
-//    @Autowired
-//    private CarDao carDao;
+
     @Autowired
     private CarService carService;
     @Autowired

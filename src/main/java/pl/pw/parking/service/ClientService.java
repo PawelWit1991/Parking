@@ -1,8 +1,9 @@
-package pl.pw.parking.client;
+package pl.pw.parking.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.pw.parking.repository.ClientRepository;
 import pl.pw.parking.domain.Client;
 
 import javax.transaction.Transactional;

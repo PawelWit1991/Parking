@@ -1,4 +1,4 @@
-package pl.pw.parking.client;
+package pl.pw.parking.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,8 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import pl.pw.parking.dao.ClientDao;
+import pl.pw.parking.service.ClientService;
 import pl.pw.parking.domain.Car;
-import pl.pw.parking.car.CarService;
+import pl.pw.parking.service.CarService;
 import pl.pw.parking.domain.Client;
 
 import javax.validation.Valid;

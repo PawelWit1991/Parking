@@ -1,4 +1,4 @@
-package pl.pw.parking.car;
+package pl.pw.parking.dao;
 
 
 import org.springframework.stereotype.Component;

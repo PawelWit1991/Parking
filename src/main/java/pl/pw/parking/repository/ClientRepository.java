@@ -1,4 +1,4 @@
-package pl.pw.parking.client;
+package pl.pw.parking.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import pl.pw.parking.domain.Client;

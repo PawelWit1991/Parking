@@ -2,7 +2,7 @@ package pl.pw.parking.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.pw.parking.car.CarRepository;
+import pl.pw.parking.repository.CarRepository;
 import pl.pw.parking.domain.Parking;
 import pl.pw.parking.repository.ParkingRepository;
 
