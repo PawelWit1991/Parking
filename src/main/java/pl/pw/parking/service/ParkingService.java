@@ -21,9 +21,16 @@ public class ParkingService {
 
         carRepository.findById(parking.getCar().getId()).ifPresent(car -> {
 
-            parking.setCar(car);
-            parking.setEndDate(LocalDateTime.now().plusHours(parking.getHowMany()));
-            parkingRepository.save(parking);
+            if(parkingRepository.findAll().stream().filter(parkingdb ->
+                            (parking.getBoughtDate().equals(parkingdb.getBoughtDate())&&parking.getEndDate().equals(parkingdb.getEndDate()))  ||
+                                    ( parkingdb.getBoughtDate().isAfter(parking.getBoughtDate()) && parkingdb.getEndDate().isBefore(parking.getBoughtDate()) &&
+                                            parkingdb.getBoughtDate().isAfter(parking.getEndDate()) && parkingdb.getEndDate().isBefore(parking.getEndDate()))
+                    ).count()<0) {
+
+                parking.setCar(car);
+                parking.setEndDate(LocalDateTime.now().plusHours(parking.getHowMany()));
+                parkingRepository.save(parking);
+            }
         });
     }
 }

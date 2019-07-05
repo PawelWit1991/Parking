@@ -30,10 +30,7 @@ public class CarController {
         return clientService.getAllClients();
     }
 
-    @ModelAttribute("parkingSpaces")
-    public List<Integer> getParkingSpaces() {
-        return carService.parkingSpaces();
-    }
+
 
     @GetMapping("/add")
     public String add(Model model) {

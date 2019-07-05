@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c5aaeb6a-b807-4493-90b4-d917ed103bbd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/car/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/car/CarDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/dao/CarDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/car/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/repository/CarRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/car/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/service/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/client/ClientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/dao/ClientDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/client/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/repository/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/client/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/service/CarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ParkingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ParkingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/car/carsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/car/carsList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,13 +26,87 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/ClientController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/ParkingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="570">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/service/CarService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="66" column="20" selection-start-line="59" selection-start-column="12" selection-end-line="66" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2045#2046#0" expanded="true" />
+                <element signature="e#2103#2104#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ParkingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/ParkingApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/clientCars.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/carsList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -41,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/CarController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="270">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,87 +124,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/service/CarService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/stopTime.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ClientService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="e#1182#1183#0" expanded="true" />
-                <element signature="e#1255#1256#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parking/create.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/repository/CarRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/repository/ClientRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/dao/CarDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="e#457#458#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/dao/ClientDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -167,15 +163,12 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/Parking/controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/Parking/controller/Index.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/messages.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/Parking/model/Car.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/car/edit.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/car/allCarsOfClient.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/car/carList.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/Parking/car/CarRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/car/clientCars.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/car/carsList.html" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/Parking/parking/Parking.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/client/add.html" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/Parking/client/ClientController.java" />
@@ -194,15 +187,18 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/repository/ParkingRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Parking.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/car/CarService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ParkingService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Car.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/client/ClientController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/car/add.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parking/create.html" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/ParkingController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/CarController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ClientService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Car.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/CarController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/car/carsList.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/service/CarService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ParkingService.java" />
       </list>
     </option>
   </component>
@@ -224,7 +220,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -274,7 +269,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="parking" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Parking" type="b2602c69:ProjectViewProjectNode" />
@@ -283,7 +278,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="parking" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Parking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Parking" type="b2602c69:ProjectViewProjectNode" />
@@ -323,6 +327,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,7 +416,35 @@
     <frame x="67" y="25" width="1613" height="1025" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2929164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29993618" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3872768" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955357" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32850778" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.4341518" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29674536" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -437,7 +470,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -535,31 +568,10 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/Parking/model/Car.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore.save" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/clientCars" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/clientCars.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/carsList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -575,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="65" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/client/add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -593,25 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/ParkingApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -632,26 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ParkingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/ParkingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -659,29 +625,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Parking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
+        <state relative-caret-position="105">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -689,10 +635,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/CarController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/stopTime.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="75">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parking/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/repository/CarRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/repository/ClientRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -717,55 +691,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/repository/ClientRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="525">
+          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/repository/CarRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Parking.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="165">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ClientService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/domain/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="90">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/clientCars.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/ParkingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/controller/CarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/carsList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/ParkingApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/service/ParkingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/pw/parking/service/CarService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="466">
+          <caret line="66" column="20" selection-start-line="59" selection-start-column="12" selection-end-line="66" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2045#2046#0" expanded="true" />
+            <element signature="e#2103#2104#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/car/stopTime.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parking/create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
         </state>
       </provider>
     </entry>

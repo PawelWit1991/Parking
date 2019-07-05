@@ -16,8 +16,8 @@
         <th>ID</th>
         <th>BRAND</th>
         <th>MODEL CAR</th>
-        <th>CREATED</th>
-        <th>MODIEFIED</th>
+        <th>REGISTRATION NUMBER</th>
+        <th>CLIENT</th>
     </tr>
     <tr th:each="car : ${cars}">
         <td th:text="${car.id}">ID</td>
@@ -25,6 +25,7 @@
         <td th:text="${car.modelCar}">CONTENT</td>
         <td th:text="${car.registrationNumber}">CREATED</td>
         <td th:text="${car.client}">CREATED</td>
+        <td th:text="${car.parking.howMany}">Time To END</td>
         <td><a th:href="@{|/delete/${car.id}|}" >Usuń</a></td>
         <td><a th:href="@{|/edit/${car.id}|}" >Edytuj</a></td>
     </tr>

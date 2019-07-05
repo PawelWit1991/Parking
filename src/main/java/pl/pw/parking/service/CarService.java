@@ -8,8 +8,12 @@ import pl.pw.parking.domain.Car;
 
 
 import javax.transaction.Transactional;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -52,9 +56,22 @@ public class CarService {
     }
 
     public List<Car> getAllCars() {
-        return carRepository.findAll();
+        return carRepository.findAll().stream().map(car -> {
+            if(car.getParking().getBoughtDate().isBefore(LocalDateTime.now())){
+                car.getParking().setHowMany(Duration.between(LocalDateTime.now(),car.getParking().getEndDate()).toMinutes());
+            } else {
+                car.getParking().setHowMany(Duration.between(car.getParking().getBoughtDate(), car.getParking().getEndDate()).toMinutes());
+            }
+
+            if(car.getParking().getHowMany()<0){
+                car.getParking().setHowMany(0L);
+            }
+           return car;
+        }).collect(Collectors.toList());
 
     }
+
+
 
     public List<Car> findCarByClientId(Long id){
         return carRepository.findCarByClientId(id);
@@ -64,15 +81,5 @@ public class CarService {
 
 
 
-    public List<Integer> parkingSpaces(){
-
-        List<Integer> parkingSpaces=new ArrayList<>();
-
-        for (int i = 0; i < 51; i++) {
-            parkingSpaces.add(i);
-        }
-
-        return parkingSpaces;
-    }
 
 }
