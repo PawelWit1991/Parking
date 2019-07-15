@@ -5,31 +5,32 @@
 <head lang="pl">
     <title>Good Thymes Virtual Grocery</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="card text-center">
 
 
 
 <form action="#" th:action="@{/client/add}" th:object="${client}" method="post">
-    <table border="1">
 
-        <tr>
-            <td><label th:text="#{msg.firstName}" /></td>
-            <td><input type="text" th:field="*{firstName}" /></td>
-            <td th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First Name
-                Error</td>
-        </tr>
-        <tr>
-            <td><label th:text="#{msg.lastName}" /></td>
-            <td><input type="text" th:field="*{lastName}" /></td>
-            <td th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last Name
-                Error</td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="Submit" /></td>
-        </tr>
-    </table>
+
+    <div class="form-group">
+            <label th:text="#{msg.firstName}" />
+            <input type="text" th:field="*{firstName}" />
+            <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First Name
+                Error</span>
+    </div>
+    <div class="form-group">
+            <label th:text="#{msg.lastName}" />
+            <input type="text" th:field="*{lastName}" />
+            <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last Name
+                Error</span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">ADD</button>
+    </div>
+
 </form>
 </body>
 

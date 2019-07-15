@@ -57,16 +57,24 @@ public class CarService {
 
     public List<Car> getAllCars() {
         return carRepository.findAll().stream().map(car -> {
-            if(car.getParking().getBoughtDate().isBefore(LocalDateTime.now())){
-                car.getParking().setHowMany(Duration.between(LocalDateTime.now(),car.getParking().getEndDate()).toMinutes());
-            } else {
-                car.getParking().setHowMany(Duration.between(car.getParking().getBoughtDate(), car.getParking().getEndDate()).toMinutes());
-            }
+                if(car.getParking()!=null) {
+                    if (car.getParking().getBoughtDate().isBefore(LocalDateTime.now())) {
+                        car.getParking().setHowMany(Duration.between(LocalDateTime.now(), car.getParking().getEndDate()).toMinutes());
+                    } else {
+                        car.getParking().setHowMany(Duration.between(car.getParking().getBoughtDate(), car.getParking().getEndDate()).toMinutes());
+                    }
 
-            if(car.getParking().getHowMany()<0){
-                car.getParking().setHowMany(0L);
-            }
-           return car;
+                    if (car.getParking().getHowMany() < 0) {
+                        car.getParking().setHowMany(0L);
+                    }
+
+                }
+                else {
+//                    car.getParking().setHowMany(0L);
+                    return car;
+                }
+                return car;
+
         }).collect(Collectors.toList());
 
     }

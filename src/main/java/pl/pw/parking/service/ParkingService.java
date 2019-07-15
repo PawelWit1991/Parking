@@ -25,7 +25,7 @@ public class ParkingService {
                             (parking.getBoughtDate().equals(parkingdb.getBoughtDate())&&parking.getEndDate().equals(parkingdb.getEndDate()))  ||
                                     ( parkingdb.getBoughtDate().isAfter(parking.getBoughtDate()) && parkingdb.getEndDate().isBefore(parking.getBoughtDate()) &&
                                             parkingdb.getBoughtDate().isAfter(parking.getEndDate()) && parkingdb.getEndDate().isBefore(parking.getEndDate()))
-                    ).count()<0) {
+                    ).count()<10) {
 
                 parking.setCar(car);
                 parking.setEndDate(LocalDateTime.now().plusHours(parking.getHowMany()));

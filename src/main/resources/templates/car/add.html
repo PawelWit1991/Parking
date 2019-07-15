@@ -2,54 +2,58 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
+
 <head lang="pl">
     <title>ADD CLIENT</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="card text-center">
 
-<h1><p th:utext="#{parking.welcome}"></h1>
+<h1><p th:text="#{parking.welcome}"></h1>
 
 </p>
 
 <form action="#" th:action="@{/car/add}" th:object="${car}" method="post">
-    <table border="1">
 
-        <tr>
-            <td><label th:text="#{msg.brand}" /></td>
-            <td><input type="text" th:field="*{brand}" /></td>
-            <td th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}">Brand
-                Error</td>
-        </tr>
-        <tr>
-            <td><label th:text="#{msg.modelCar}" /></td>
-            <td><input type="text" th:field="*{modelCar}" /></td>
-            <td th:if="${#fields.hasErrors('modelCar')}" th:errors="*{modelCar}">Model Car
-                Error</td>
-        </tr>
-        <tr>
-            <td><label th:text="#{msg.registrationNumber}" /></td>
-            <td><input type="text" th:field="*{registrationNumber}" /></td>
-            <td th:if="${#fields.hasErrors('registrationNumber')}" th:errors="*{registrationNumber}">Registration Number
-                Error</td>
-        </tr>
-        <tr>
-            <td><label th:text="#{msg.chooseClient}" /></td>
-            <td>
+
+        <div class="form-group">
+            <label th:text="#{msg.brand}" />
+            <input type="text" th:field="*{brand}" />
+            <span th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}">Brand
+                Error</span>
+        </div>
+        <div class="form-group">
+            <label th:text="#{msg.modelCar}" />
+            <input type="text" th:field="*{modelCar}" />
+            <span th:if="${#fields.hasErrors('modelCar')}" th:errors="*{modelCar}">Model Car
+                Error</span>
+        </div>
+        <div class="form-group">
+            <label th:text="#{msg.registrationNumber}" />
+            <input type="text" th:field="*{registrationNumber}" />
+            <span th:if="${#fields.hasErrors('registrationNumber')}" th:errors="*{registrationNumber}">Registration Number
+                Error</span>
+        </div>
+        <div class="form-group">
+            <label th:text="#{msg.chooseClient}" />
+
                 <select th:field="*{client}">
                     <option value=""> -- </option>
                     <option th:each="client : ${clients}"
                             th:value="${client.id}"
                             th:utext="${client.lastName}"/>
                 </select>
-        </tr>
+
+        </div>
 
 
-        </tr>
-            <td><input type="submit" value="Submit" /></td>
-        </tr>
-    </table>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">ADD</button>
+
+        </div>
+
 </form>
 </body>
 

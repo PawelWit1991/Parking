@@ -37,6 +37,7 @@ public class Car {
     @JoinColumn(name="client_id")
     private Client client;
 
+
     @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
     private Parking parking;
 

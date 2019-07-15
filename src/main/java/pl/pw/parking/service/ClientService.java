@@ -18,24 +18,24 @@ public class ClientService {
     @Autowired
     private ClientRepository clientRepository;
 
-    public void save(Client client) {
-        clientRepository.save(client);
+    public Client save(Client client) {
+        return clientRepository.save(client);
     }
 
 
 
-    public void update(Client client) {
-        clientRepository.findById(client.getId()).ifPresent(clientdb -> {
+    public Client update(Client client) {
+        return clientRepository.findById(client.getId()).map(clientdb -> {
 
             if(client.getFirstName()!=null){
                 clientdb.setFirstName(client.getFirstName());
             }
             if(client.getLastName()!=null){
-                clientdb.setLastName(clientdb.getLastName());
+                clientdb.setLastName(client.getLastName());
             }
 
-            clientRepository.save(clientdb);
-        });
+          return  clientRepository.save(clientdb);
+        }).orElse(null);
     }
 
     public void delete(long id) {

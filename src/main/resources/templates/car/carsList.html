@@ -5,35 +5,44 @@
 <head>
     <title>CARS LIST</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
-<body>
-
+<body class="card text-center">
+<h3><p> <a href="http://localhost:8080/">HOME PAGE</a></p></h3>
 <h1>Cars List</h1>
 
-<table>
+
+<table class="table">
     <tr>
         <th>ID</th>
         <th>BRAND</th>
         <th>MODEL CAR</th>
         <th>REGISTRATION NUMBER</th>
         <th>CLIENT</th>
+        <th>TIME TO THE END[minuts]</th>
     </tr>
     <tr th:each="car : ${cars}">
         <td th:text="${car.id}">ID</td>
-        <td th:text="${car.brand}">TITLE</td>
-        <td th:text="${car.modelCar}">CONTENT</td>
-        <td th:text="${car.registrationNumber}">CREATED</td>
-        <td th:text="${car.client}">CREATED</td>
-        <td th:text="${car.parking.howMany}">Time To END</td>
-        <td><a th:href="@{|/delete/${car.id}|}" >Usuń</a></td>
-        <td><a th:href="@{|/edit/${car.id}|}" >Edytuj</a></td>
+        <td th:text="${car.brand}">BRAND</td>
+        <td th:text="${car.modelCar}">MODEL CAR</td>
+        <td th:text="${car.registrationNumber}">REGISTRATION NUMBER</td>
+        <td th:text="${car.client.firstName + ' ' + car.client.lastName}">CLIENT</td>
+        <td><p th:text="${car.parking} ? ${car.parking.howMany}:''" th:if="${car.getParking()}!=null"></p> <a th:if="${car.getParking()}==null" th:href="@{|/parking/create/${car.id}|}">Buy a Parking Time</a></td>
+        <td><a th:href="@{|/car/delete/${car.id}|}" >Delete</a></td>
+        <td><a th:href="@{|/car/edit/${car.id}|}" >Edit</a></td>
+        </div>
     </tr>
 </table>
 
-<p>
-    <a href="http://localhost:8080/saveNote">Add Note</a>
-    <a href="http://localhost:8080/">Main Page</a></p>
+
+
+
+<a class="btn btn-primary btn-lg" href="http://localhost:8080/car/add" role="button">ADD CAR</a>
+<a class="btn btn-secondary btn-lg" href="http://localhost:8080/client/add" role="button">ADD CLIENT</a>
+
+
 
 </body>
 

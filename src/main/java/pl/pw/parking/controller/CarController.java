@@ -47,7 +47,7 @@ public class CarController {
             return "car/add";
         }
         carService.save(car);
-        return "redirect:/";
+        return "redirect:/car/all";
     }
 
     @RequestMapping("/all")
@@ -57,10 +57,9 @@ public class CarController {
     }
 
     @RequestMapping("/delete/{id}")
-    @ResponseBody
     public String delete(@PathVariable Long id) {
         carService.delete(id);
-        return "redirect:/cars/all";
+        return "redirect:/car/all";
     }
 
     @RequestMapping("/edit/{id}")
@@ -78,7 +77,7 @@ public class CarController {
 
         carService.update(car);
 
-        return "redirect:/cars/all";
+        return "redirect:/car/all";
     }
 
     @RequestMapping("/clientCars/{id}")
