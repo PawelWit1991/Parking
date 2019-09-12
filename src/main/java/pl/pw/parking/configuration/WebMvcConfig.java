@@ -11,13 +11,12 @@ import javax.servlet.MultipartConfigElement;
 public class WebMvcConfig implements WebMvcConfigurer {
 
 
-
-	@Bean
-	public MultipartConfigElement multipartConfigElement() {
-		MultipartConfigFactory factory = new MultipartConfigFactory();
-		factory.setMaxFileSize("5MB");
-		factory.setMaxRequestSize("5MB");
-		return factory.createMultipartConfig();
-	}
+    @Bean
+    public MultipartConfigElement multipartConfigElement() {
+        MultipartConfigFactory factory = new MultipartConfigFactory();
+        factory.setMaxFileSize("5MB");
+        factory.setMaxRequestSize("5MB");
+        return factory.createMultipartConfig();
+    }
 
 }

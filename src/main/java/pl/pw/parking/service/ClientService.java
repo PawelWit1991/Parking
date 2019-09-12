@@ -13,8 +13,7 @@ import java.util.List;
 @Transactional
 public class ClientService {
 
-//    @Autowired
-//    private ClientDao clientDao;
+
     @Autowired
     private ClientRepository clientRepository;
 
@@ -23,18 +22,17 @@ public class ClientService {
     }
 
 
-
     public Client update(Client client) {
         return clientRepository.findById(client.getId()).map(clientdb -> {
 
-            if(client.getFirstName()!=null){
+            if (client.getFirstName() != null) {
                 clientdb.setFirstName(client.getFirstName());
             }
-            if(client.getLastName()!=null){
+            if (client.getLastName() != null) {
                 clientdb.setLastName(client.getLastName());
             }
 
-          return  clientRepository.save(clientdb);
+            return clientRepository.save(clientdb);
         }).orElse(null);
     }
 
@@ -47,7 +45,7 @@ public class ClientService {
 
     }
 
-    public Client findByClientId(Long id){
+    public Client findByClientId(Long id) {
         return clientRepository.findById(id).orElse(new Client());
     }
 

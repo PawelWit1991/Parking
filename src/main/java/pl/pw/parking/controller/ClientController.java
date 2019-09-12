@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import pl.pw.parking.dao.ClientDao;
 import pl.pw.parking.service.ClientService;
 import pl.pw.parking.domain.Car;
 import pl.pw.parking.service.CarService;
@@ -23,8 +22,6 @@ public class ClientController {
     @Autowired
     private ClientService clientService;
     @Autowired
-    private ClientDao clientDao;
-    @Autowired
     private CarService carService;
 
     @ModelAttribute("cars")
@@ -39,8 +36,8 @@ public class ClientController {
 
     @GetMapping("/add")
     public String add(Model model) {
-        Client client=new Client();
-        model.addAttribute("client",client);
+        Client client = new Client();
+        model.addAttribute("client", client);
 
         return "client/add";
     }
@@ -71,15 +68,15 @@ public class ClientController {
     @RequestMapping("/edit/{id}")
 
     public String editClient(@PathVariable Long id, Model model) {
-        Client client= clientService.findByClientId(id);
-        model.addAttribute("client",client);
+        Client client = clientService.findByClientId(id);
+        model.addAttribute("client", client);
         clientService.update(client);
         return "client/edit";
     }
 
     @PostMapping("/edit/{id}")       // w ten sposob odbieram edytowana clienta z widoku edit.jsp
 
-    public String editedBook(@Valid Client client){
+    public String editedBook(@Valid Client client) {
 
         clientService.update(client);
 

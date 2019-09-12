@@ -17,31 +17,31 @@ public class ClientRestController {
     private ClientService clientService;
 
     @GetMapping("/list")
-    public List<Client> getClients(){
+    public List<Client> getClients() {
         return clientService.getAllClients();
     }
 
     @GetMapping("/{id}")
-    public Client getClient(@PathVariable Long id){
+    public Client getClient(@PathVariable Long id) {
 
         return clientService.findByClientId(id);
     }
 
 
     @PostMapping
-    public Client createClient(@RequestBody Client client){
+    public Client createClient(@RequestBody Client client) {
 
         return clientService.save(client);
     }
 
     @PutMapping
-    public Client updateClient(@RequestBody Client client){
+    public Client updateClient(@RequestBody Client client) {
 
         return clientService.update(client);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteClient(@PathVariable Long id){
+    public void deleteClient(@PathVariable Long id) {
 
         clientService.delete(id);
     }

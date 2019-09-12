@@ -1,12 +1,18 @@
-Parking to aplikacja internetowa, która daje możliwość dodawania klientów i
-ich samochodów oraz przypisania im opłat czasowych na danym miejscu parkingowym.
-Administrator ma również możliwość utworzenia, odczytania, modyfikowania i usuwania encji (CRUD), również w wersji REST.
+# Projekt: "Parking"
 
-Użyte technologie:
--Java
--Spring
--Hibernate
--H2
--REST
--Bootstrap
+
+## Krótko o projekcie:
+Aplikacja internetowa, która daje możliwość dodawania klientów i ich samochodów  oraz przypisania im opłat czasowych na danym miejscu parkingowym.
+Użytkownik ma również możliwość utworzenia, odczytania, modyfikowania i usuwania danych (CRUD).
+
+##W projekcie znalazły zastosowanie następujące technologie/języki/frameworki/biblioteki:
+
+- Java 8
+- Spring Boot
+- Hibernate
+- Maven
+- Thymeleaf
+- Bootstrap
+- MySQL
+- Lombok
 

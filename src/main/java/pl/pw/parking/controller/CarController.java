@@ -31,7 +31,6 @@ public class CarController {
     }
 
 
-
     @GetMapping("/add")
     public String add(Model model) {
         Car car = new Car();
@@ -112,9 +111,9 @@ public class CarController {
 
     public String time(@RequestParam String mins) {
 
-        long minsL=Long.parseLong(mins);
-        LocalTime now=LocalTime.now();
-        LocalTime toOver=now.plusMinutes(minsL);
+        long minsL = Long.parseLong(mins);
+        LocalTime now = LocalTime.now();
+        LocalTime toOver = now.plusMinutes(minsL);
 
         return toOver.toString();
 

@@ -19,21 +19,21 @@ import java.time.LocalDateTime;
 public class Parking {
 
 
-   @Id
-   @GeneratedValue
-   private Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
 
-   @CreatedDate
-   private LocalDateTime boughtDate;
+    @CreatedDate
+    private LocalDateTime boughtDate;
 
-   private LocalDateTime endDate;
+    private LocalDateTime endDate;
 
-   @Transient
-   private Long howMany;
+    @Transient
+    private Long howMany;
 
-   @OneToOne(fetch = FetchType.EAGER)
-   @JoinColumn(name="car_id")
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "car_id")
 
-   private Car car;
+    private Car car;
 
 }

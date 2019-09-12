@@ -21,18 +21,18 @@ public class ParkingController {
 
 
     @GetMapping("/create/{id}")
-    public String getCreate(Model model, @PathVariable Long id){
+    public String getCreate(Model model, @PathVariable Long id) {
 
         model.addAttribute("parking", Parking.builder()
-        .car(Car.builder().id(id).build())
-        .build());
+                .car(Car.builder().id(id).build())
+                .build());
 
         return "parking/create";
 
     }
 
     @PostMapping("/create")
-    public String postCreate(Parking parking){
+    public String postCreate(Parking parking) {
 
         parkingService.save(parking);
 
